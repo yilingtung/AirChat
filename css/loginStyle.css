@@ -1,0 +1,171 @@
+body{
+  background: #E8F1F5;
+  margin: 0px;
+}
+.logo{
+  margin-top: 50px;
+  margin-bottom: 10px;
+  width: 380px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.character{
+  left: 90px;
+  width: 100%;
+	margin: auto;
+	width: 70px;
+	border-radius: 100px;
+	height: 70px;
+	background: #E8F1F5 ;
+	position: relative;
+	bottom: -15px;
+}
+
+.character img {
+  position: absolute;
+  left: 2.5px;
+	width: 60px;
+	height: 60px;
+	border-radius: 100px;
+	margin: auto;
+	border:3px solid #fff;
+	display: block;
+}
+
+.bubble{
+  position: absolute;;
+  height: 25px;
+  padding: 0px 10px 0px 10px;
+  background: #FFFFFF;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  line-height: 25px;
+}
+
+.right_bubble{
+  left: 80px;
+  top:-10px;
+  -ms-transform: rotate(-20deg); /* IE 9 */
+  -webkit-transform: rotate(-20deg); /* Safari */
+  transform: rotate(-20deg);
+}
+
+.right_bubble:after{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 5px 9px 5px 0;
+  border-color: transparent #FFFFFF;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -9px;
+  top: 7px;
+}
+
+.top_bubble{
+  top: -50px;
+  -ms-transform: rotate(-7deg); /* IE 9 */
+  -webkit-transform: rotate(-7deg); /* Safari */
+  transform: rotate(-7deg);
+}
+
+.top_bubble:after{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 10px 5px 0;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -10px;
+}
+
+.register_bubble{
+  top: -50px;
+  left: 30px;
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Safari */
+  transform: rotate(7deg);
+}
+
+.register_bubble:after{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 10px 5px 0;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -10px;
+}
+
+.form-wrap{
+  width:250px;
+	height: auto;
+	margin: auto;
+}
+
+.form_input {
+	border: none;
+	background: #fff;
+  font-weight:700 ;
+	display: block;
+	height: 40px;
+	outline: none;
+	width: 100%;
+	margin: auto;
+	padding: 6px 12px 6px 12px;
+}
+
+.account {
+	border-radius: 7px 7px 0px 0px ;
+}
+
+.password {
+	border-radius: 0px 0px 7px 7px ;
+}
+
+.form-sbmit {
+	width: 100%;
+	border-radius: 7px;
+	background: #A6E3E9;
+	text-decoration: center;
+	border: none;
+	color: #fff;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	outline: none;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+.form-sbmit:hover{
+  background: #afe9ef;
+}
+
+.form-wrap button:active{
+  background: #89d9e1;
+}
+
+.form-wrap div{
+  margin: 10px 0px 10px 0px;
+  font-size: 13px;
+  color: #A9A9A9;
+  text-align: center;
+}
+
+.form-wrap a{
+  margin-left: 5px;
+  color: #71C9CE;
+}
+
+.error_msg{
+  color: #F47C7C;
+}

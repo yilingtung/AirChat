@@ -1,0 +1,282 @@
+body{
+  background: #E8F1F5;
+  margin: 0px;
+}
+
+header{
+  justify-content: space-between;
+  background-color: #fff;
+  color: #71C9CE;
+  border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+  height: 3.5em;
+  left: 0;
+  line-height: 3.5em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
+header div{
+  height: 37px;
+  padding: 10px 30px 10px 30px;
+}
+
+header img{
+  height: 100%;
+  padding-right: 10px;
+}
+
+.user{
+  padding-right: 10px;
+  float: right;
+  display: inline;
+  padding-left: 20px;
+  padding: 0;
+  height: 37px;
+  line-height: 37px;
+  font-size: 16px;
+}
+
+.log_out {
+	border-radius: 7px;
+	background: #E8F1F5;
+	text-decoration: center;
+	border: none;
+	color: #A5ACAF;
+	padding: 0px 20px 0px 20px;
+  margin-left: 20px;
+  height: 37px;
+  line-height: 37px;
+	outline: none;
+	font-size: 13px;
+	cursor: pointer;
+  float: right;
+}
+
+.log_out:hover{
+  background: #afe9ef;
+  color: #fff;
+}
+
+.log_out:active{
+  background: #89d9e1;
+}
+
+.aircraft{
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  margin-top: -250px;
+  width: 100%;
+  height: 500px;
+  background-image: url(../img/aircraft.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0px 0px;
+}
+
+.cloud{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/cloud.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0px 0px;
+}
+
+.chat_box{
+  position: fixed;
+  bottom: 0px;
+  right: 10px;
+  background-color: #fff;
+  width: 260px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.chat_head{
+  cursor: pointer;
+  background-color: #71C9CE;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.chat_head:hover{
+  background-color: #6fd2d8;
+}
+
+.chat_body{
+  height: 400px;
+}
+
+.chat_friend{
+  cursor: pointer;
+  padding: 10px;
+  height: 28;
+}
+.chat_friend:hover{
+  background-color: #f7f7f7;
+}
+
+.user_name{
+  margin-left: 38;
+  margin-top: 6;
+}
+
+.msg_box{
+  position: fixed;
+  bottom: 0px;
+  right: 280px;
+  background-color: #fff;
+  width: 260px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.msg_head{
+  height: 36px;
+  cursor: pointer;
+  background-color: #71C9CE;
+  color: #fff;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.msg_head:hover{
+  background-color: #6fd2d8;
+}
+
+.msg_name{
+  position: absolute;
+  padding: 10px;
+}
+
+.close{
+  float: right;
+}
+
+.msg_body{
+  height: 250px;
+  font-size: 14px;
+  overflow: auto;
+  position: relative;
+}
+
+.msg_A{
+  position: relative;
+  width: 210px;
+  margin: 5px 10px 5px 40px;
+  float: right;
+}
+
+.msg_A_say{
+  background-color: #CBF1F5;
+  float: right;
+  padding: 10px;
+  border-radius: 5px 15px;
+  max-width: 160px;
+  word-wrap: break-word;
+}
+
+.msg_B{
+  position: relative;
+  width: 220px;
+  margin: 5px 30px 5px 10px;
+  float: left;
+}
+
+.msg_B_say{
+  background-color: #E8F1F5;
+  float: left;
+  margin-left: 38px;
+  padding: 10px;
+  border-radius: 15px 5px;
+  max-width: 160px;
+  word-wrap: break-word;
+}
+
+.msg_user_img{
+  position: absolute;
+  bottom: 30px;
+}
+
+.user_img{
+  position: absolute;
+  height: 28px;
+  width: 28px;
+}
+
+.msg_input{
+  border: transparent;
+  padding: 10px;
+  border-top: 1px solid #bdc3c7;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+.toggle_box{
+  position: fixed;
+  bottom: 0px;
+  right: 1180px;
+  display: none;
+}
+
+.toggle_bottom{
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  float: right;
+  background-color: #fff;
+}
+
+.toggle_bottom:hover{
+  background-color: #f7f7f7;
+}
+
+.toggle_icon{
+  height: 24px;
+  width: 24px;
+  margin: 6px;
+  background-image: url('img/chat.png');
+  background-size: contain;
+}
+
+.toggle_body{
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.toggle_div{
+  width: 115px;
+  height: 36px;
+}
+
+.toggle_div:hover{
+  background-color: #f7f7f7;
+}
+
+.toggle_name{
+  position: absolute;
+  padding: 10px;
+  width: 95px;
+  display: inline;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  float: left;
+}
+
+.close{
+  position: absolute;
+  right: 0px;
+  width: 8px;
+  display: inline;
+  margin: 10px;
+  z-index: 2;
+}
