@@ -16,7 +16,7 @@
     $query_str = "SELECT name,id FROM Members WHERE id = ".$item['friend_id'];
     $sub_result = mysql_query($query_str);
     $sub_item = mysql_fetch_array($sub_result);
-    $responseText[$i] = ['name' => $sub_item['name'], 'id' => $sub_item['id']];
+    $responseText[$i] = ['name' => $sub_item['name'], 'id' => $sub_item['id'], 'img' => $sub_item['img']];
     $i++;
   }
   echo json_encode($responseText);

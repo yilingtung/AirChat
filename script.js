@@ -7,13 +7,13 @@ var cloudImg;
 $(document).ready(function () {
   $(window).resize(Resize);
   width = $(window).width();
-  aircraftImg = document.getElementsByClassName('aircraft')[0];
-  cloudImg = document.getElementsByClassName('cloud')[0];
-
-  $("body").mousemove(function(event){
-    UpdateImgPosByPercent(aircraftImg, event.clientX/$(window).width(), event.clientY/$(window).height(), 200);
-    UpdateImgPosByPercent(cloudImg, event.clientX/$(window).width(), event.clientY/$(window).height(), -50);
-  });
+  // aircraftImg = document.getElementsByClassName('aircraft')[0];
+  // cloudImg = document.getElementsByClassName('cloud')[0];
+  //
+  // $("body").mousemove(function(event){
+  //   UpdateImgPosByPercent(aircraftImg, event.clientX/$(window).width(), event.clientY/$(window).height(), 200);
+  //   UpdateImgPosByPercent(cloudImg, event.clientX/$(window).width(), event.clientY/$(window).height(), -50);
+  // });
 
   $('.chat_head').click(function () {
     $('.chat_body').slideToggle("fast");
@@ -32,7 +32,7 @@ $(document).on("click", function () {
 
 var activedMsgBoxArray = [];
 var activedToggleDivArray = [];
-function ShowUpMsgBox(_id,_name) {
+function ShowUpMsgBox(_id,_name,img) {
   //create msgBox
   if (document.getElementById('msg_'+_id) == null){
     var msgBox = document.createElement("div");
@@ -40,6 +40,7 @@ function ShowUpMsgBox(_id,_name) {
     msgBox.className = "msg_box";
     msgBox.setAttribute("id", "msg_"+_id);
     msgBox.setAttribute("count", 0);
+    msgBox.setAttribute("img", img);
     var closeMsgBtn = document.createElement("div");
     closeMsgBtn.className = "close";
     closeMsgBtn.innerHTML = 'x';
@@ -181,8 +182,9 @@ function Resize() {
   UpdateActivedMsgPosition();
 }
 
-function UpdateImgPosByPercent(img, x_percent, y_percent, p) {
+/*function UpdateImgPosByPercent(img, x_percent, y_percent, p) {
   var img_x = (x_percent - 0.5) * p;
   var img_y = (y_percent - 0.5) * p;
   img.style.backgroundPosition = img_x + " " + img_y;
 }
+*/

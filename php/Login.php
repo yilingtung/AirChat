@@ -17,6 +17,7 @@
       $_SESSION['name'] = $item['name'];
       $_SESSION['id'] = $item['id'];
       $_SESSION['account'] = $item['account'];
+      $_SESSION['img'] = $item['img'];
       $responseText = 'index.php';
       echo $responseText;
   }

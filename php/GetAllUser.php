@@ -14,7 +14,7 @@
   //累加的變數
   $i = 0;
   while($item = mysql_fetch_array($result)){
-    $responseText[$i] = ['name' => $item['name'], 'id' => $item['id']];
+    $responseText[$i] = ['name' => $item['name'], 'id' => $item['id'], 'img' => $item['img']];
     $i++;
   }
   echo json_encode($responseText);

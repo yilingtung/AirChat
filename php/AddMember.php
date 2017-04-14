@@ -6,6 +6,7 @@
   $name = $_POST['name'];
   $account = $_POST['account'];
   $password = $_POST['password'];
+  $img = 'http://res.cloudinary.com/dxwnkzsxe/image/upload/v1492155136/chat/user_photo.png';
   $query_str = "SELECT account
                 FROM Members
                 WHERE account = '$account'";
@@ -15,7 +16,7 @@
     $responseText = null;
     die(json_encode($responseText));
   }else{
-    $query_str = "INSERT INTO Members (name, account, password) VALUES ('$name', '$account', '$password')";
+    $query_str = "INSERT INTO Members (name, account, password, img) VALUES ('$name', '$account', '$password', '$img')";
     if (!mysql_query($query_str,$conn)){
       echo 'error';
       die('Error: ' . mysql_error());
@@ -30,6 +31,7 @@
           $_SESSION['name'] = $item['name'];
           $_SESSION['id'] = $item['id'];
           $_SESSION['account'] = $item['account'];
+          $_SESSION['img'] = $item['img'];
           $responseText = 'index.php';
           echo $responseText;
       }

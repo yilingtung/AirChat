@@ -38,6 +38,14 @@ header img{
   font-size: 16px;
 }
 
+.userImg{
+  border-radius: 25px;
+  float: right;
+  display: inline;
+  margin-right: 10px;
+  padding: 0;
+}
+
 .log_out {
 	border-radius: 7px;
 	background: #E8F1F5;
@@ -243,8 +251,10 @@ textarea:focus{
   height: 24px;
   width: 24px;
   margin: 6px;
-  background-image: url('img/chat.png');
-  background-size: contain;
+}
+.toggle_icon_img{
+  height: 100%;
+  opacity: .6;
 }
 
 .toggle_body{

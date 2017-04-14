@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
   </head>
   <body>
+
     <header class="header">
       <div>
         <img src="img/logo.png" alt="">
@@ -18,10 +19,11 @@
             echo $_SESSION['name'];
           ?>
         </div>
+        <img class="userImg" src="<?php echo $_SESSION['img'];?>" alt="">
       </div>
 		</header>
-    <div class="aircraft"></div>
-    <div class="cloud"></div>
+    <!-- <div class="aircraft"></div>
+    <div class="cloud"></div> -->
     <div class="chat_box">
       <div class="chat_head">
         Chat
@@ -32,7 +34,9 @@
     <div class="toggle_box">
       <div class="toggle_body"></div>
       <div class="toggle_bottom">
-        <div class="toggle_icon"></div>
+        <div class="toggle_icon">
+          <img class="toggle_icon_img" src="./img/chat.png">
+        </div>
       </div>
     </div>
   </body>

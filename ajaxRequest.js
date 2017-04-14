@@ -15,6 +15,7 @@ function GetUserData() {
       user_name = responseText['name'];
       user_id = responseText['id'];
       user_account = responseText['account'];
+      user_img = responseText['img'];
       GetUserList();
     }
   };
@@ -28,14 +29,15 @@ function GetUserList(){
       //Success
       console.log(xmlhttp.responseText+'@line11');
       var responseText = $.parseJSON(xmlhttp.responseText);
-      console.log(responseText[0].name+'@line13');
+      console.log(responseText[0].img+'@line13');
       responseText.forEach(function(friend){
         var chatFriend = document.createElement('div');
         chatFriend.className = "chat_friend";
-        chatFriend.innerHTML = '<div class="chat_img"><img class="user_img" src="img/user_photo.png" alt="" /></div><div class="user_name"></div>';
+        chatFriend.innerHTML = '<div class="chat_img"><img class="user_img" alt="" /></div><div class="user_name"></div>';
+        chatFriend.getElementsByClassName('user_img')[0].src = friend.img;
         chatFriend.getElementsByClassName('user_name')[0].innerHTML += friend.name;
         document.getElementsByClassName('chat_body')[0].appendChild(chatFriend);
-        chatFriend.onclick = function(){ShowUpMsgBox(friend.id,friend.name)};
+        chatFriend.onclick = function(){ShowUpMsgBox(friend.id,friend.name,friend.img)};
       });
     }
   };
@@ -46,6 +48,7 @@ function GetUserList(){
 function GetConversationHistory(_id_2){
   var _id_2 = parseInt(this.id.split("_")[1]);
   var count = this.getAttribute('count');
+  var img = this.getAttribute('img');
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
     if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
@@ -59,7 +62,7 @@ function GetConversationHistory(_id_2){
           i++;
           if( i > count){
             if (msg.from_id == _id_2){
-              msgBox.childNodes[1].childNodes[0].innerHTML += '<div class="msg_B"><div class="msg_user_img"><img class="user_img" src="img/user_photo.png" alt="" /></div><div class="msg_B_say">' + msg.msg + '</div></div>';
+              msgBox.childNodes[1].childNodes[0].innerHTML += '<div class="msg_B"><div class="msg_user_img"><img class="user_img" src='+ img +' alt="" /></div><div class="msg_B_say">' + msg.msg + '</div></div>';
             }else{
               msgBox.childNodes[1].childNodes[0].innerHTML += '<div class="msg_A"><div class="msg_A_say">' + msg.msg + '</div></div>';
             }
