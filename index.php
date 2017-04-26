@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <title>AirChat</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="icon" type="image/png" href="./img/favicon.ico" />
   </head>
   <body>
 
