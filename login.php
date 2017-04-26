@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Login To Chat!</title>
     <link rel="stylesheet" href="css/loginStyle.css" type="text/css">
+    <link rel="icon" type="image/png" href="./img/favicon.ico" />
   </head>
   <body>
     <img class="logo" src="img/logo.png">
